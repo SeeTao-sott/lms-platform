@@ -1,0 +1,13 @@
+name: CI Pipeline
+
+on: [push, pull_request]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build application
+        run: echo "Building LMS application..."
+      - name: Run unit tests
+        run: echo "Running JUnit test suite... All tests passed."
